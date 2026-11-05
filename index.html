@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090b">
+  <title>EMO | آکادمی آموزش</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="EMO home"><span class="brand-mark">E</span><span>EMO<span class="gold">.</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو">☰</button>
+    <nav id="mainNav">
+      <a href="#home">خانه</a><a href="#courses">دوره‌ها</a><a href="#about">درباره ما</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn btn-outline" id="openLogin">ورود</button>
+      <button class="btn btn-gold" id="openSignup">ثبت‌نام</button>
+      <div class="user-chip hidden" id="userChip"><span id="userEmail"></span><button id="logoutBtn">خروج</button></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="eyebrow-line"></span> آکادمی آموزش EMO</div>
+        <h1>یادگیری را به<br><span class="gold-gradient">سطح بالاتری</span> ببر.</h1>
+        <p class="hero-text">مهارت‌های دیجیتال را با آموزش‌های کاربردی، ساده و هدفمند یاد بگیر. مسیر پیشرفتت از همین‌جا شروع می‌شود.</p>
+        <div class="hero-actions"><a class="btn btn-gold btn-large" href="#courses">مشاهده آموزش‌ها <span>←</span></a><button class="btn btn-ghost btn-large" id="heroLogin">ورود به حساب</button></div>
+        <div class="hero-meta"><span><b class="dot"></b> آموزش‌های منتخب</span><span>طراحی‌شده برای رشد مهارت‌ها</span></div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="glass-card main-card"><div class="card-top"><span class="tiny-label">EMO ACADEMY</span><span class="live-dot"></span></div><div class="big-e">E<span>.</span></div><div class="card-bottom"><span>LEARN · CREATE · GROW</span><span class="spark">✦</span></div></div>
+        <div class="float-tag tag-one">✦ آموزش هوشمند</div><div class="float-tag tag-two">DESIGN / TECH / DIGITAL</div>
+      </div>
+    </section>
+
+    <section class="stats section-wrap reveal">
+      <div><strong>01</strong><span>یادگیری هدفمند</span></div><div><strong>02</strong><span>آموزش ویدیویی</span></div><div><strong>03</strong><span>مسیر پیشرفت</span></div>
+    </section>
+
+    <section class="courses section-wrap" id="courses">
+      <div class="section-heading reveal"><div><div class="eyebrow"><span class="eyebrow-line"></span> مسیر یادگیری</div><h2>آموزش‌هایی برای <span class="gold">ساختن</span></h2></div><p>از مهارت‌های پایه تا ایده‌های خلاقانه؛ قدم‌به‌قدم جلو برو.</p></div>
+      <div class="course-grid">
+        <article class="course-card reveal"><div class="course-icon">⌘</div><span class="course-index">COURSE 01</span><h3>مهارت‌های کامپیوتری</h3><p>با ابزارهای کاربردی و دنیای دیجیتال بهتر آشنا شو.</p><a href="https://www.aparat.com/emo_aparat" target="_blank" rel="noopener">مشاهده آموزش‌ها <span>↗</span></a></article>
+        <article class="course-card reveal"><div class="course-icon">✳</div><span class="course-index">COURSE 02</span><h3>طراحی و گرافیک</h3><p>ایده‌هایت را به طرح‌هایی زیبا و حرفه‌ای تبدیل کن.</p><a href="https://www.aparat.com/emo_aparat" target="_blank" rel="noopener">مشاهده آموزش‌ها <span>↗</span></a></article>
+        <article class="course-card reveal"><div class="course-icon">⌁</div><span class="course-index">COURSE 03</span><h3>وب و برنامه‌نویسی</h3><p>با مفاهیم ساخت وب‌سایت و کدنویسی آشنا شو.</p><a href="https://www.aparat.com/emo_aparat" target="_blank" rel="noopener">مشاهده آموزش‌ها <span>↗</span></a></article>
+      </div>
+    </section>
+
+    <section class="cta section-wrap reveal" id="about"><div><div class="eyebrow"><span class="eyebrow-line"></span> درباره EMO</div><h2>هر مهارت تازه،<br><span class="gold">یک فرصت تازه</span> است.</h2><p>در آکادمی EMO یادگیری را ساده، جذاب و قابل‌دسترس می‌کنیم.</p></div><a class="btn btn-gold btn-large" href="https://www.aparat.com/emo_aparat" target="_blank" rel="noopener">ورود به کانال آپارات ↗</a></section>
+  </main>
+
+  <footer><a class="brand" href="#home"><span class="brand-mark">E</span><span>EMO<span class="gold">.</span></span></a><span>© EMO Academy — یادگیری، خلق، پیشرفت</span><a href="#home">بازگشت به بالا ↑</a></footer>
+
+  <div class="modal-backdrop hidden" id="authModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="auth-modal">
+      <button class="modal-close" id="closeModal" aria-label="بستن">×</button>
+      <div class="modal-brand"><span class="brand-mark">E</span></div>
+      <div class="eyebrow centered">به آکادمی EMO خوش آمدی</div>
+      <h2 id="modalTitle">ورود به حساب</h2>
+      <p class="modal-subtitle" id="modalSubtitle">برای ادامه مسیر یادگیری وارد حساب کاربری‌ات شو.</p>
+      <form id="authForm">
+        <label for="email">ایمیل</label><input id="email" type="email" placeholder="name@example.com" autocomplete="email" required>
+        <label for="password">رمز عبور</label><input id="password" type="password" placeholder="حداقل ۶ کاراکتر" minlength="6" autocomplete="current-password" required>
+        <button class="btn btn-gold submit-btn" id="submitAuth" type="submit">ورود</button>
+      </form>
+      <button class="text-button" id="forgotPassword">رمز عبورت را فراموش کرده‌ای؟</button>
+      <div class="auth-switch"><span id="switchText">حساب کاربری نداری؟</span> <button id="switchMode">ثبت‌نام کن</button></div>
+      <p class="form-message" id="formMessage" aria-live="polite"></p>
+      <p class="security-note">اتصال امن حساب کاربری با Supabase</p>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
